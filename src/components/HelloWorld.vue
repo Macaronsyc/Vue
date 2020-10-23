@@ -1,6 +1,6 @@
 <template>
   <div class="hello" @click="$emit('refresh')">
-    <div class="box">
+    <div class="box">{{num}}
 <!--      <h3>Name: {{name}}</h3>-->
 <!--      <h4>Citizen: {{address}}</h4>-->
 <!--      <h5>Birth: {{birth}}</h5>-->
@@ -21,7 +21,8 @@ export default {
   props: {
     name: "",
     address: "",
-    birth: ""
+    birth: "",
+    num: ""
 
   }
 }
@@ -40,7 +41,7 @@ export default {
   background-color: lightseagreen;
   margin: 8px;
   color: white;
-  font-size: 16px;
+  font-size: 72px;
   border-radius: 10px;
   transition: all 0.1s;
   font-family: Helvetica;
@@ -61,5 +62,6 @@ export default {
 
 .box {
   /*margin: 0 auto;*/
+
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <hello-world v-for="item in items" :name="item.Name" :address="item.Address" :birth="item.Birth" @refresh="initialize"></hello-world>
+    <hello-world v-for="item in items" :name="item.Name" :address="item.Address" :birth="item.Birth" :num="item.Number" @refresh="initialize"></hello-world>
   </div>
 
 </template>
@@ -52,11 +52,13 @@ export default {
 
       let data = [] // 用于接受生成数据的数组
        // 定义随机值
+      let start = 54
       for(let i = 0; i < 4; i ++) { // 可自定义生成的个数
         let template = {
           'Name': Random.name(), // 生成姓名
           'Address': Random.province(), // 生成地址
-          'Birth': Random.date()
+          'Birth': Random.date(),
+          'Number': 1
         }
         data.push(template)
       }
