@@ -1,5 +1,5 @@
 # vuepro
-For github push
+For github push:qa
 
 > A Vue.js project
 
