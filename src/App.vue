@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+<!--    <div class="triangle"></div>-->
+<!--    <div class="shan"></div>-->
+<!--    <div class="diamond"></div>-->
     <hello-world v-for="item in items" :name="item.Name" :address="item.Address" :birth="item.Birth" :num="item.Number" @refresh="initialize"></hello-world>
   </div>
 
@@ -84,5 +87,38 @@ export default {
   justify-content: flex-start;
   width: 800px;
   margin: 0 auto;
+}
+
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-top: transparent solid 100px;
+  border-right: transparent solid 100px;
+  border-left: red solid 100px;
+  border-bottom: transparent solid 100px;
+
+
+}
+
+.shan {
+  width: 0px;
+  height: 0px;
+  border-top: transparent solid 100px;
+  border-right: transparent solid 100px;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-left: red solid 100px;
+  border-bottom: red solid 100px;
+  transform: rotate(-45deg);
+
+}
+
+.diamond {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  /*transform: skew(45deg, -45deg);*/
+  /*transform: translate(300px, 300px);*/
 }
 </style>
