@@ -1,15 +1,18 @@
-var http = require('http')
-http.createServer(function (request, response) {
+var express = require("express")
+var app = express()
 
-  // 发送 HTTP 头部
-  // HTTP 状态值: 200 : OK
-  // 内容类型: text/plain
-  response.writeHead(200, {'Content-Type': 'text/plain'});
+app.get('/', function(req,res){
+  res.send("hello world")
+})
 
-  // 发送响应数据 "Hello World"
-  // reponse.write("Hallo Welt!")
-  response.end('Hello Welt\n');
-}).listen(8888);
+var server = app.listen(8081, '127.0.0.1',function(){
+  var host = server.address().address
+  var port = server.address().port
 
-// 终端打印如下信息
-// console.log('Server running at http://127.0.0.1:8888/');
+  console.log("The visited address is http://" + host + ":" + port)
+})
+
+app.get('/listfiles', function(req,res){
+  res.send("File list interface")
+  console.log("router list files")
+})

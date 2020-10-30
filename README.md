@@ -1,5 +1,5 @@
 # vuepro
-For github push
+For github push conflict trial
 Pushed from ZF on 26th
 
 > A Vue.js project
